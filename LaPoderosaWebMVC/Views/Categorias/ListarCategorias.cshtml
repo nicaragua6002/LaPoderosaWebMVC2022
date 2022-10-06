@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LaPoderosaWebMVC.Models.Categoria>
+
+@{
+    ViewBag.Title = "Categoria";
+    Layout = "~/Views/Shared/_FrontPage.cshtml";
+}
+
+<h2 style="padding-top:150px">Principales categorias de productos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            
+            @Html.ActionLink("Ver Productos", "DetalleCategoria", new { id=item.Id }) 
+           
+        </td>
+    </tr>
+}
+
+</table>

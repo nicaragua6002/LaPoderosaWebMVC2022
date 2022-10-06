@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNet.Identity
+
+<nav class="sidebar-nav">
+
+
+
+    @if (Request.IsAuthenticated)
+    {
+
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <ul id="sidebarnav">
+                <li> <a class="waves-effect waves-dark" href="@Url.Action( "Index", "Manage")" aria-expanded="false"><i class="mdi zmdi-edit"></i><span class="hide-menu"> Bienvenido @User.Identity.GetUserName()</span></a></li>
+
+                <li> <a class="waves-effect waves-dark" href="@Url.Action( "Index", "Categorias")" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Categorias</span></a></li>
+                <li> <a class="waves-effect waves-dark" href="@Url.Action("Index", "Proveedors")" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Proveedores</span></a></li>
+                <li> <a class="waves-effect waves-dark" href="@Url.Action("Index", "Productoes")" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Productos</span></a></li>
+                <li> <a class="waves-effect waves-dark" href="@Url.Action("Index", "Recetas")" aria-expanded="false"><i class="mdi mdi-bookmark"></i><span class="hide-menu">Recetas</span></a></li>
+                <li> <a class="waves-effect waves-dark" href="@Url.Action("Index", "Ingredientes")" aria-expanded="false"><i class="mdi mdi-cake"></i><span class="hide-menu">Ingredientes</span></a></li>
+              
+                @if (User.IsInRole("Admin"))
+                {
+                <li> <a class="waves-effect waves-dark" href="@Url.Action("Register", "Account")" aria-expanded="false"><i class="mdi mdi-cake"></i><span class="hide-menu">Agregar Usuario</span></a></li>
+
+                }
+
+            </ul>
+            <div class="text-center m-t-30">
+                <a href="javascript:document.getElementById('logoutForm').submit()" class="btn waves-effect waves-light btn-danger hidden-md-down"> Cerrar Sesión</a>
+            </div>
+
+        }
+
+    }
+    else
+    {
+
+        <a href="@Url.Action("Login", "Account")" class="btn uza-btn">Iniciar sesión</a>
+
+
+        @*<li  class="btn waves-effect waves-light btn-skype hidden-md-down"><i class="ti-plus"></i>  @Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+
+
+        @*<li  class="btn waves-effect waves-light btn-secondary hidden-md-down"><i class="ti-user"></i>  @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
+
+    }
+
+</nav>

@@ -1,0 +1,42 @@
+﻿@model LaPoderosaWebMVC.Models.Ingrediente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ingrediente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Porcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receta.NombreReceta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receta.NombreReceta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

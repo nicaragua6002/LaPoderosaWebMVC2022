@@ -1,0 +1,32 @@
+﻿@model LaPoderosaWebMVC.Models.Categoria
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_FrontPage.cshtml";
+}
+
+<h2 style="padding-top:150px">Productos en @Model.Nombre</h2>
+
+<div>
+    <h4>@Model.Productos.Count items</h4>
+    <hr />
+    
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Existencia</th>
+        </tr>
+
+        @foreach (var item in Model.Productos)
+        {
+        <tr>
+            <td>@item.NombreProducto</td>
+            <td>@item.PrecioUnidad</td>
+            <td>@item.UnidadEnExistencia</td>
+        </tr>
+          
+        }
+    </table>
+</div>
+

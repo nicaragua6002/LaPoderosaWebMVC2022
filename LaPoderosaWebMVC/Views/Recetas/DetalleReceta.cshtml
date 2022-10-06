@@ -1,0 +1,40 @@
+﻿@model LaPoderosaWebMVC.Models.Receta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_FrontPage.cshtml";
+}
+
+<h2 style="padding-top:150px">@Model.NombreReceta</h2>
+
+<div>
+    <h4>Receta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreReceta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreReceta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img)
+        </dd>
+
+    </dl>
+</div>
+

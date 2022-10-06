@@ -1,0 +1,42 @@
+﻿@model IEnumerable<LaPoderosaWebMVC.Models.Receta>
+
+@{
+    ViewBag.Title = "Recetas";
+    Layout = "~/Views/Shared/_FrontPage.cshtml";
+}
+
+
+<div style="padding-top:150px" class="container">
+    <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+            <div class="section-heading text-center">
+                <h2>Lista de las mejores recetas para tu paladar</h2>
+                <p>de la mano de los chefs internacionales!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <!-- Single Blog Post -->
+            <div class="col-12 col-lg-4">
+                <div class="single-blog-post bg-img mb-80" style="background-image: url(~/Content/uza/img/bg-img/8.jpg);">
+                    <!-- Post Content -->
+                    <div class="post-content">
+                        <span class="post-date"><span>23</span> August, 2018</span>
+                        <a href="#" class="post-title">@item.NombreReceta</a>
+                        <p>@item.Preparacion.Substring(0,200)</p>
+                        <a href="@Url.Action("DetalleReceta", new { id = item.Id })" class="read-more-btn">Leer más<i class="arrow_carrot-2right"></i></a>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+
+    </div>
+</div>

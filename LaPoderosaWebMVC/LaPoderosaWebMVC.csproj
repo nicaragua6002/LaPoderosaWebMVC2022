@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BD991C9-6352-43CA-A3DD-06C834C80295}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaPoderosaWebMVC</RootNamespace>
+    <AssemblyName>LaPoderosaWebMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientesController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductoesController.cs" />
+    <Compile Include="Controllers\ProveedorsController.cs" />
+    <Compile Include="Controllers\RecetasController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LaPoderosaWS.asmx.cs">
+      <DependentUpon>LaPoderosaWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Categoria.cs">
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Ingrediente.cs">
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LaPoderosaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaPoderosaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LaPoderosaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LaPoderosaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaPoderosaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Producto.cs">
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proveedor.cs">
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Receta.cs">
+      <DependentUpon>LaPoderosaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard\assets\images\big\img1.jpg" />
+    <Content Include="Content\dashboard\assets\images\custom-select.png" />
+    <Content Include="Content\dashboard\assets\images\favicon.png" />
+    <Content Include="Content\dashboard\assets\images\logo-icon.png" />
+    <Content Include="Content\dashboard\assets\images\logo-text.png" />
+    <Content Include="Content\dashboard\assets\images\users\1.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\2.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\3.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\4.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\5.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\6.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\7.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\8.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\d1.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\d2.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\d3.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\d4.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\d5.jpg" />
+    <Content Include="Content\dashboard\assets\images\users\profile.png" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\js\popper.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\c3-master\c3.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\c3-master\c3.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist-init.css" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist-init.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.css" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\.gitignore" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\Gruntfile.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\src\scripts\chartist-plugin-tooltip.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\clean.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\copy.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\jasmine.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\jshint.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\sass.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\uglify.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\umd.js" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\test\runner.html" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\test\spec\spec-tooltip.js" />
+    <Content Include="Content\dashboard\assets\plugins\d3\d3.js" />
+    <Content Include="Content\dashboard\assets\plugins\d3\d3.min-v4.js" />
+    <Content Include="Content\dashboard\assets\plugins\d3\d3.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\gmaps.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\gmaps.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\jquery.gmaps.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.controls.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.core.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.events.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.geofences.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.geometry.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.layers.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.map_types.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.markers.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.native_extensions.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.overlays.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.routes.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.static.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.streetview.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.styles.js" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\lib\gmaps.utils.js" />
+    <Content Include="Content\dashboard\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\js\perfect-scrollbar.jquery.js" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\js\perfect-scrollbar.js" />
+    <Content Include="Content\dashboard\assets\plugins\perfect-scrollbar\js\perfect-scrollbar.min.js" />
+    <Content Include="Content\dashboard\html\css\animate.css" />
+    <Content Include="Content\dashboard\html\css\colors\default-dark.css" />
+    <Content Include="Content\dashboard\html\css\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\dashboard\html\css\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="Content\dashboard\html\css\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\dashboard\html\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\dashboard\html\css\pages\common.css" />
+    <Content Include="Content\dashboard\html\css\pages\dashboard.css" />
+    <Content Include="Content\dashboard\html\css\pages\error-pages.css" />
+    <Content Include="Content\dashboard\html\css\pages\form-pages.css" />
+    <Content Include="Content\dashboard\html\css\pages\google-vector-map.css" />
+    <Content Include="Content\dashboard\html\css\pages\icon-page.css" />
+    <Content Include="Content\dashboard\html\css\pages\other-pages.css" />
+    <Content Include="Content\dashboard\html\css\pages\pages.css" />
+    <Content Include="Content\dashboard\html\css\pages\pagination.css" />
+    <Content Include="Content\dashboard\html\css\pages\perfect-scrollbar.css" />
+    <Content Include="Content\dashboard\html\css\pages\table-pages.css" />
+    <Content Include="Content\dashboard\html\css\spinners.css" />
+    <Content Include="Content\dashboard\html\css\style.css" />
+    <Content Include="Content\dashboard\html\icon-material.html" />
+    <Content Include="Content\dashboard\html\index.html" />
+    <Content Include="Content\dashboard\html\js\custom.js" />
+    <Content Include="Content\dashboard\html\js\custom.min.js" />
+    <Content Include="Content\dashboard\html\js\dashboard.js" />
+    <Content Include="Content\dashboard\html\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\dashboard\html\js\sidebarmenu.js" />
+    <Content Include="Content\dashboard\html\js\waves.js" />
+    <Content Include="Content\dashboard\html\map-google.html" />
+    <Content Include="Content\dashboard\html\pages-blank.html" />
+    <Content Include="Content\dashboard\html\pages-error-404.html" />
+    <Content Include="Content\dashboard\html\pages-profile.html" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\.gitignore" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\css\font-awesome.min.css" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\HELP-US-OUT.txt" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\linea.css" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\dashboard\html\table-basic.html" />
+    <Content Include="Content\img\logopoderosa.png" />
+    <Content Include="Content\uza\css\animate.css" />
+    <Content Include="Content\uza\css\bootstrap.min.css" />
+    <Content Include="Content\uza\css\default-assets\classy-nav.css" />
+    <Content Include="Content\uza\css\font-awesome.min.css" />
+    <Content Include="Content\uza\css\fonts\ElegantIcons.eot" />
+    <Content Include="Content\uza\css\fonts\ElegantIcons.svg" />
+    <Content Include="Content\uza\css\fonts\ElegantIcons.ttf" />
+    <Content Include="Content\uza\css\fonts\ElegantIcons.woff" />
+    <Content Include="Content\uza\css\magnific-popup.css" />
+    <Content Include="Content\uza\css\owl.carousel.min.css" />
+    <Content Include="Content\uza\css\style.css" />
+    <Content Include="Content\uza\fonts\Aileron-Black.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Black.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Black.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Black.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Black.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-BlackItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-BlackItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-BlackItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-BlackItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-BlackItalic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-Bold.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Bold.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Bold.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Bold.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Bold.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-BoldItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-BoldItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-BoldItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-BoldItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-BoldItalic.woff2" />
+    <Content Include="Content\uza\fonts\aileron-font-style.css" />
+    <Content Include="Content\uza\fonts\Aileron-Heavy.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Heavy.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Heavy.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Heavy.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Heavy.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-HeavyItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-HeavyItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-HeavyItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-HeavyItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-HeavyItalic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-Italic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Italic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Italic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Italic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Italic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-Light.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Light.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Light.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Light.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Light.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-LightItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-LightItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-LightItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-LightItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-LightItalic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-Regular.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Regular.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Regular.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Regular.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Regular.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBold.eot" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBold.svg" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBold.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBold.woff" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBold.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBoldItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBoldItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBoldItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBoldItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-SemiBoldItalic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-Thin.eot" />
+    <Content Include="Content\uza\fonts\Aileron-Thin.svg" />
+    <Content Include="Content\uza\fonts\Aileron-Thin.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-Thin.woff" />
+    <Content Include="Content\uza\fonts\Aileron-Thin.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-ThinItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-ThinItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-ThinItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-ThinItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-ThinItalic.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLight.eot" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLight.svg" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLight.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLight.woff" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLight.woff2" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLightItalic.eot" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLightItalic.svg" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLightItalic.ttf" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLightItalic.woff" />
+    <Content Include="Content\uza\fonts\Aileron-UltraLightItalic.woff2" />
+    <Content Include="Content\uza\fonts\classy.eot" />
+    <Content Include="Content\uza\fonts\classy.svg" />
+    <Content Include="Content\uza\fonts\classy.ttf" />
+    <Content Include="Content\uza\fonts\classy.woff" />
+    <Content Include="Content\uza\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\uza\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\uza\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\uza\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\uza\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\uza\fonts\FontAwesome.otf" />
+    <Content Include="Content\uza\img\bg-img\1.png" />
+    <Content Include="Content\uza\img\bg-img\10.jpg" />
+    <Content Include="Content\uza\img\bg-img\11.jpg" />
+    <Content Include="Content\uza\img\bg-img\12.jpg" />
+    <Content Include="Content\uza\img\bg-img\13.jpg" />
+    <Content Include="Content\uza\img\bg-img\14.jpg" />
+    <Content Include="Content\uza\img\bg-img\15.jpg" />
+    <Content Include="Content\uza\img\bg-img\16.jpg" />
+    <Content Include="Content\uza\img\bg-img\17.jpg" />
+    <Content Include="Content\uza\img\bg-img\18.jpg" />
+    <Content Include="Content\uza\img\bg-img\19.jpg" />
+    <Content Include="Content\uza\img\bg-img\2.jpg" />
+    <Content Include="Content\uza\img\bg-img\20.jpg" />
+    <Content Include="Content\uza\img\bg-img\21.jpg" />
+    <Content Include="Content\uza\img\bg-img\22.jpg" />
+    <Content Include="Content\uza\img\bg-img\23.jpg" />
+    <Content Include="Content\uza\img\bg-img\24.jpg" />
+    <Content Include="Content\uza\img\bg-img\3.jpg" />
+    <Content Include="Content\uza\img\bg-img\4.jpg" />
+    <Content Include="Content\uza\img\bg-img\5.jpg" />
+    <Content Include="Content\uza\img\bg-img\6.jpg" />
+    <Content Include="Content\uza\img\bg-img\7.jpg" />
+    <Content Include="Content\uza\img\bg-img\8.jpg" />
+    <Content Include="Content\uza\img\bg-img\9.jpg" />
+    <Content Include="Content\uza\img\core-img\curve-1.png" />
+    <Content Include="Content\uza\img\core-img\curve-2.png" />
+    <Content Include="Content\uza\img\core-img\curve-3.png" />
+    <Content Include="Content\uza\img\core-img\curve-4.png" />
+    <Content Include="Content\uza\img\core-img\curve-5.png" />
+    <Content Include="Content\uza\img\core-img\curve-6.png" />
+    <Content Include="Content\uza\img\core-img\favicon.ico" />
+    <Content Include="Content\uza\img\core-img\logo.png" />
+    <Content Include="Content\uza\img\core-img\quote.png" />
+    <Content Include="Content\uza\js\bootstrap.min.js" />
+    <Content Include="Content\uza\js\default-assets\active.js" />
+    <Content Include="Content\uza\js\default-assets\avoid.console.error.js" />
+    <Content Include="Content\uza\js\default-assets\classynav.js" />
+    <Content Include="Content\uza\js\default-assets\jquery.scrollup.min.js" />
+    <Content Include="Content\uza\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\uza\js\isotope.pkgd.min.js" />
+    <Content Include="Content\uza\js\jarallax-video.min.js" />
+    <Content Include="Content\uza\js\jarallax.min.js" />
+    <Content Include="Content\uza\js\jquery.counterup.min.js" />
+    <Content Include="Content\uza\js\jquery.easing.min.js" />
+    <Content Include="Content\uza\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\uza\js\jquery.min.js" />
+    <Content Include="Content\uza\js\owl.carousel.min.js" />
+    <Content Include="Content\uza\js\popper.min.js" />
+    <Content Include="Content\uza\js\uza.bundle.js" />
+    <Content Include="Content\uza\js\waypoints.min.js" />
+    <Content Include="Content\uza\js\wow.min.js" />
+    <Content Include="Content\uza\scss\mixins\_flex.scss" />
+    <Content Include="Content\uza\scss\mixins\_miscellaneous.scss" />
+    <Content Include="Content\uza\scss\style.scss" />
+    <Content Include="Content\uza\scss\utilities\_color.scss" />
+    <Content Include="Content\uza\scss\utilities\_fonts.scss" />
+    <Content Include="Content\uza\scss\utilities\_responsive.scss" />
+    <Content Include="Content\uza\scss\utilities\_variables.scss" />
+    <Content Include="Content\uza\scss\_about.scss" />
+    <Content Include="Content\uza\scss\_backtotop.scss" />
+    <Content Include="Content\uza\scss\_blog.scss" />
+    <Content Include="Content\uza\scss\_breadcrumb.scss" />
+    <Content Include="Content\uza\scss\_buttons.scss" />
+    <Content Include="Content\uza\scss\_cfa.scss" />
+    <Content Include="Content\uza\scss\_contact.scss" />
+    <Content Include="Content\uza\scss\_cta.scss" />
+    <Content Include="Content\uza\scss\_footer.scss" />
+    <Content Include="Content\uza\scss\_header.scss" />
+    <Content Include="Content\uza\scss\_heading.scss" />
+    <Content Include="Content\uza\scss\_hero.scss" />
+    <Content Include="Content\uza\scss\_newsletter.scss" />
+    <Content Include="Content\uza\scss\_portfolio.scss" />
+    <Content Include="Content\uza\scss\_preloader.scss" />
+    <Content Include="Content\uza\scss\_reboot.scss" />
+    <Content Include="Content\uza\scss\_service.scss" />
+    <Content Include="Content\uza\scss\_spacing.scss" />
+    <Content Include="Content\uza\scss\_team.scss" />
+    <Content Include="Content\uza\scss\_testimonial.scss" />
+    <Content Include="Content\uza\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="LaPoderosaWS.asmx" />
+    <Content Include="Models\LaPoderosaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LaPoderosaModel.Context.cs</LastGenOutput>
+      <DependentUpon>LaPoderosaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\LaPoderosaModel.edmx.sql" />
+    <Content Include="Models\LaPoderosaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LaPoderosaModel.cs</LastGenOutput>
+      <DependentUpon>LaPoderosaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\LaPoderosaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LaPoderosaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LaPoderosaModel.edmx.diagram">
+      <DependentUpon>LaPoderosaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\bootstrap\js\popper.min.js.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\chartist.min.js.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\scss\chartist.scss" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-js\dist\scss\settings\_chartist-settings.scss" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\bower.json" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\CHANGELOG.md" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\dist\LICENSE" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\LICENSE" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\package.json" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\README.md" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css.map" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\src\scss\chartist-plugin-tooltip.scss" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\tasks\aliases.yml" />
+    <Content Include="Content\dashboard\assets\plugins\chartist-plugin-tooltip-master\test\.jshintrc" />
+    <Content Include="Content\dashboard\assets\plugins\d3\API.md" />
+    <Content Include="Content\dashboard\assets\plugins\d3\CHANGES.md" />
+    <Content Include="Content\dashboard\assets\plugins\d3\LICENSE" />
+    <Content Include="Content\dashboard\assets\plugins\d3\README.md" />
+    <Content Include="Content\dashboard\assets\plugins\gmaps\gmaps.min.js.map" />
+    <Content Include="Content\dashboard\html\scss\app.scss" />
+    <Content Include="Content\dashboard\html\scss\colors\default-dark.scss" />
+    <Content Include="Content\dashboard\html\scss\grid.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\animated.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\core.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\icons.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\larger.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\list.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\mixins.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\path.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\screen-reader.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\stacked.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\less\variables.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\.bower.json" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\.npmignore" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\bower.json" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\fonts\FontAwesome.otf" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\animated.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\bordered-pulled.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\core.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\extras.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\fixed-width.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\font-awesome.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\icons.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\larger.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\list.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\mixins.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\path.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\rotated-flipped.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\spinning.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\stacked.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\less\variables.less" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\font-awesome.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_animated.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_bordered-pulled.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_core.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_extras.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_fixed-width.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_icons.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_larger.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_list.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_mixins.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_path.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_rotated-flipped.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_spinning.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_stacked.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\old\scss\_variables.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_path.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\linea.less" />
+    <Content Include="Content\dashboard\html\scss\icons\linea-icons\linea.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\less\simple-line-icons.less" />
+    <Content Include="Content\dashboard\html\scss\icons\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Content\dashboard\html\scss\icons\themify-icons\themify-icons.less" />
+    <Content Include="Content\dashboard\html\scss\pages\button-page.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\common.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\dashboard.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\error-pages.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\form-pages.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\google-vector-map.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\icon-page.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\other-pages.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\pages.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\pagination.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\perfect-scrollbar.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\table-pages.scss" />
+    <Content Include="Content\dashboard\html\scss\pages\widget-page.scss" />
+    <Content Include="Content\dashboard\html\scss\prepros-6.config" />
+    <Content Include="Content\dashboard\html\scss\responsive.scss" />
+    <Content Include="Content\dashboard\html\scss\sidebar.scss" />
+    <Content Include="Content\dashboard\html\scss\style.scss" />
+    <Content Include="Content\dashboard\html\scss\variable.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\activity.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\blog.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\calendar.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\carousel.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\chat-widget.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\comment.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\common-widget.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\contact.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\feed.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\msg-box.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\profile.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\social.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\steamline.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\to-do.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\topbar-mail.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\weather-widget.scss" />
+    <Content Include="Content\dashboard\html\scss\widgets\widgets.scss" />
+    <Content Include="Content\uza\style.css.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Productoes\Create.cshtml" />
+    <Content Include="Views\Productoes\Delete.cshtml" />
+    <Content Include="Views\Productoes\Details.cshtml" />
+    <Content Include="Views\Productoes\Edit.cshtml" />
+    <Content Include="Views\Productoes\Index.cshtml" />
+    <Content Include="Views\Proveedors\Create.cshtml" />
+    <Content Include="Views\Proveedors\Delete.cshtml" />
+    <Content Include="Views\Proveedors\Details.cshtml" />
+    <Content Include="Views\Proveedors\Edit.cshtml" />
+    <Content Include="Views\Proveedors\Index.cshtml" />
+    <Content Include="Views\Ingredientes\Create.cshtml" />
+    <Content Include="Views\Ingredientes\Delete.cshtml" />
+    <Content Include="Views\Ingredientes\Details.cshtml" />
+    <Content Include="Views\Ingredientes\Edit.cshtml" />
+    <Content Include="Views\Ingredientes\Index.cshtml" />
+    <Content Include="Views\Recetas\Create.cshtml" />
+    <Content Include="Views\Recetas\Delete.cshtml" />
+    <Content Include="Views\Recetas\Details.cshtml" />
+    <Content Include="Views\Recetas\Edit.cshtml" />
+    <Content Include="Views\Recetas\Index.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Shared\_FrontPage.cshtml" />
+    <Content Include="Views\Categorias\ListarCategorias.cshtml" />
+    <Content Include="Views\Categorias\DetalleCategoria.cshtml" />
+    <Content Include="Views\Recetas\ListaRecetas.cshtml" />
+    <Content Include="Views\Recetas\DetalleReceta.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50398</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50398/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
